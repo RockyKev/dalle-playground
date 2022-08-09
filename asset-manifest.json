@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dalle-playground/static/css/main.4f390346.css",
+    "main.js": "/dalle-playground/static/js/main.c7e99507.js",
+    "index.html": "/dalle-playground/index.html",
+    "main.4f390346.css.map": "/dalle-playground/static/css/main.4f390346.css.map",
+    "main.c7e99507.js.map": "/dalle-playground/static/js/main.c7e99507.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f390346.css",
+    "static/js/main.c7e99507.js"
+  ]
+}
