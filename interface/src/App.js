@@ -7,6 +7,7 @@ import {
 import { callDalleService } from "./backend_api";
 import GeneratedImageList from "./GeneratedImageList";
 import TextPromptInput from "./TextPromptInput";
+import SaveAllImagesButton from "./SaveAllImagesButton";
 
 import "./App.css";
 import BackendUrlInput from "./BackendUrlInput";
@@ -127,7 +128,7 @@ const App = ({ classes }) => {
         <div className={classes.root}>
             <div className={classes.title}>
                 <Typography variant="h3">
-                    DALL-E Playground <span role="img" aria-label="sparks-emoji">✨</span>
+                    DALL-E Playground <span role="img" aria-label="heart-emoji">❤️</span>
                 </Typography>
             </div>
 
@@ -175,6 +176,11 @@ const App = ({ classes }) => {
                     {queryTime !== 0 && <Typography variant="body2" color="textSecondary">
                         Generation execution time: {queryTime} sec
                     </Typography>}
+
+                    {(generatedImages.length > 0 || apiError || isFetchingImgs) &&
+                    <SaveAllImagesButton generatedImages={generatedImages} generatedImagesFormat={generatedImagesFormat} promptText={promptText}></SaveAllImagesButton>
+                }
+
                 </div>
                 
                 {(generatedImages.length > 0 || apiError || isFetchingImgs) &&
